@@ -1,22 +1,21 @@
 {
-  "name": "electron-quick-start",
+  "productName": "Material Browser",
+  "name": "bond-browser",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Electron browser",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . bond-browser --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Material Browser\"",
+    "package-linux": "electron-packager . bond-browser --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icon.png --prune=true --out=release-builds",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/Material\\ Browser-darwin-x64/Material\\ Browser.app material-browser --out=release-builds --overwrite --icon=assets/icon.icns"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Leddy231",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "^1.7.12"
+  },
+  "dependencies": {
+    "material-design-icons": "^3.0.1"
   }
 }

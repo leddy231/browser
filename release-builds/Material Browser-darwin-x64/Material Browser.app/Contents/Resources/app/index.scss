@@ -1,0 +1,94 @@
+
+$mainColor: #9C27B0;
+$barHeight: 5vh;
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    height: $barHeight;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+#view {
+    height: 100vh - $barHeight;
+    width: 100%;
+}
+
+#url {
+    font-weight: 700;
+    font-size: 24px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: inherit;
+}
+
+#urlWrap {
+    display: flex;
+    width: 100%;
+    height: $barHeight;
+    line-height: $barHeight;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    background-color: mix($mainColor, white, 40%);
+}
+
+.button {
+    background-color: $mainColor;
+    height: $barHeight;
+    width: $barHeight;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    &:hover {
+        cursor: pointer;
+        background-color: mix($mainColor, white, 80%);
+    }
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+*:focus {
+    outline: none;
+}
+
+::selection {
+    color: white;
+    background: $mainColor;
+}
