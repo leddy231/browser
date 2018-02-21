@@ -10,15 +10,20 @@
     <div id = "navbar">
       
       <div class="button" id = "closeButton"><i class="material-icons">close</i></div>
-      <div class="button" id = "maxButton"><i class="material-icons">fullscreen</i></div>
       <div class="button" id = "minButton"><i class="material-icons">photo_size_select_small</i></div>
+      <div class="button" id = "tabsButton"><i class="material-icons" id = "tabsCount">filter_none</i></div>
       <div class="button" id = "refreshButton"><i class="material-icons">refresh</i></div>
       <div class="button" id = "backButton"><i class="material-icons">arrow_back</i></div>
       <div id = "urlWrap">
           <input type = "text" id = "url">&nbsp;
       </div>
     </div>
-    <webview id="view" src="https://www.google.com/" allowpopups></webview>
+    <div id = "tabs">
+      
+    </div>
+    <div id = "miniTabs">
+
+    </div>
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')

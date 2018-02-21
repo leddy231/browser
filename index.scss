@@ -1,6 +1,6 @@
 
 $mainColor: #9C27B0;
-$barHeight: 5vh;
+$barHeight: 4vh;
 
 body, html {
     height: 100%;
@@ -16,7 +16,7 @@ body, html {
     align-items: flex-end;
 }
 
-#view {
+.view {
     height: 100vh - $barHeight;
     width: 100%;
 }
@@ -91,4 +91,15 @@ body, html {
 ::selection {
     color: white;
     background: $mainColor;
+}
+
+.hidden {
+    display: none;
+}
+
+.small {
+    width: 20vw;
+    height: 20vw;
+    border: solid white 10px;
+    float: left;
 }
